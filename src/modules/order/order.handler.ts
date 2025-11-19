@@ -2,7 +2,7 @@ import { APIGatewayProxyHandlerV2 } from "aws-lambda";
 import { orderService } from "./order.service";
 
 export const createOrder: APIGatewayProxyHandlerV2 = async (event) => {
-    console.log("test");
+    console.log("test1");
   const body = JSON.parse(event.body || "{}");
   const order = await orderService.createOrder(body);
 
