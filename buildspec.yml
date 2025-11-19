@@ -1,0 +1,25 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 20
+    commands:
+      - echo Installing dependencies...
+      - npm install
+
+  pre_build:
+    commands:
+      - echo Running pre-build steps...
+      - npm install --silent --no-progress -g serverless
+
+  build:
+    commands:
+      - echo Starting serverless deployment...
+      - serverless deploy --stage $env -region $region --conceal --verbose 
+      - echo "finished deployment"
+
+  post_build:
+    commands:
+      - echo Build completed successfully!
+
