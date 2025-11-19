@@ -1,5 +1,9 @@
 version: 0.2
 
+env:
+  variables:
+    SERVERLESS_ACCESS_KEY: "your-key-here"
+    
 phases:
   install:
     runtime-versions:
@@ -16,6 +20,7 @@ phases:
   build:
     commands:
       - echo Starting serverless deployment...
+      - export SERVERLESS_ACCESS_KEY= "AK0ilHO3kTvDyKDTMDJFUV8TNuKuSqfDpVdPpu8PbPnwr"
       - serverless deploy --stage $env --region $region --conceal --verbose 
       - echo "finished deployment1"
 
