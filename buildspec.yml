@@ -16,7 +16,7 @@ phases:
   build:
     commands:
       - echo Starting serverless deployment...
-      - serverless deploy --stage $env -region $region --conceal --verbose 
+      - serverless deploy --stage $env --region $region --conceal --verbose 
       - echo "finished deployment1"
 
   post_build:
