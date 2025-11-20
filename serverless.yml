@@ -18,7 +18,7 @@ provider:
     NODE_ENV: production
 
   # Optional: VPC for PostgreSQL (if using RDS)
-  # Remove if not needed
+  # Remove if not needed 
   vpc:
     securityGroupIds:
       - sg-040eeb1294d0e1de4
