@@ -2,7 +2,7 @@ version: 0.2
 
 env:
   variables:
-    SERVERLESS_ACCESS_KEY: "your-key-here"
+    NODE_ENV: "production"
     
 phases:
   install:
@@ -20,7 +20,7 @@ phases:
   build:
     commands:
       - echo Starting serverless deployment...
-      - export SERVERLESS_ACCESS_KEY= "AK0ilHO3kTvDyKDTMDJFUV8TNuKuSqfDpVdPpu8PbPnwr"
+      - serverless config credentials --token $SERVERLESS_ACCESS_KEY
       - serverless deploy --stage $env --region $region --conceal --verbose 
       - echo "finished deployment1"
 
