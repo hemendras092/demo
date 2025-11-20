@@ -79,7 +79,9 @@ functions:
 custom:
   esbuild:
     bundle: true
+    minify: false
     sourcemap: true
     target: node18
     platform: node
+    typescript: true
     concurrency: 10
