@@ -20,11 +20,11 @@ phases:
   build:
     commands:
       - echo Starting serverless deployment...
-      - serverless config credentials --token $SERVERLESS_ACCESS_KEY
+      - serverless login --token $SERVERLESS_ACCESS_KEY
       - serverless deploy --stage $env --region $region --conceal --verbose 
       - echo "finished deployment1"
 
   post_build:
     commands:
-      - echo Build completed successfully!
+      - echo Build completed successfully!!
 
