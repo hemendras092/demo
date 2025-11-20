@@ -2,10 +2,6 @@ service: modular-backend
 
 frameworkVersion: '4'
 
-plugins:
-  - serverless-offline
-  - serverless-prune-plugin
-
 
 provider:
   name: aws
@@ -22,7 +18,7 @@ provider:
     NODE_ENV: production
 
   # Optional: VPC for PostgreSQL (if using RDS)
-  # Remove if not needed
+  # Remove if not needed 
   vpc:
     securityGroupIds:
       - sg-040eeb1294d0e1de4
