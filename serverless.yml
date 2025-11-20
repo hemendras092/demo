@@ -2,10 +2,6 @@ service: modular-backend
 
 frameworkVersion: '4'
 
-plugins:
-  - serverless-offline
-  - serverless-prune-plugin
-
 
 provider:
   name: aws
